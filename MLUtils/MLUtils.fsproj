@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>netstandard21</TargetFramework>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<Authors>Faisal Waris</Authors>
 		<Description>A set of utilities that support Microsoft.ML usage from F#</Description>

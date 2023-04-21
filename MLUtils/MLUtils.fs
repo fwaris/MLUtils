@@ -89,6 +89,14 @@ module Schema =
         atCols |> List.iter (sch.Remove>>ignore)        
         sch
 
+    ///generate F# record type form DataView schema
+    let genType name (sch:DataViewSchema) =
+        printfn "[<CLIMutable>]"
+        printfn "type %A = {" name
+        sch |> Seq.iter (fun c -> printIndent 4; printfn $"{c.Name} : {c.Type.RawType.Name}")
+        printfn " }"
+
+
 (*
 type Viz =
     static member show (dv:IDataView,?title,?rows, ?showHidden) =

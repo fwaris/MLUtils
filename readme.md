@@ -6,3 +6,5 @@ A set of utility functions that support working with Microsoft.ML from F#:
 - Print out the nested transforms learned by AutoML during an experiment run
 - Schema and column information utility functions
 - Operator to join transformations into a composite pipeline
+- Generate an F# record type from IDataView schema
+
