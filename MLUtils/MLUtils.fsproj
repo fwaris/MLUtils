@@ -9,7 +9,7 @@
 		<PackageProjectUrl>https://github.com/fwaris/MLUtils</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/fwaris/MLUtils</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>0.10</Version>
+		<Version>0.20</Version>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 		<PlatformTarget>x64</PlatformTarget>
 		<PackageReleaseNotes>Initial release</PackageReleaseNotes>
