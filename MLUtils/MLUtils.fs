@@ -89,6 +89,21 @@ module Schema =
         atCols |> List.iter (sch.Remove>>ignore)        
         sch
 
+    ///Remove the given columns from the schema definition 
+    ///Mutates the schema defintion
+    let removeCols (sch:SchemaDefinition) (cols:string seq) =                
+        let colSet = set cols
+        let remCols = sch |> Seq.filter(fun x->colSet.Contains x.ColumnName) |> Seq.toList
+        remCols |> List.iter (sch.Remove>>ignore)        
+
+    ///Remove all but the given columns from the schema definition 
+    ///Mutates the schema defintion
+    let keepCols (sch:SchemaDefinition) (cols:string seq) =                
+        let colSet = set cols
+        let remCols = sch |> Seq.filter(fun x->colSet.Contains x.ColumnName |> not) |> Seq.toList
+        remCols |> List.iter (sch.Remove>>ignore)        
+       
+
     ///generate F# record type form DataView schema
     let genType name (sch:DataViewSchema) =
         printfn "[<CLIMutable>]"

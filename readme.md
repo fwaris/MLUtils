@@ -7,4 +7,4 @@ A set of utility functions that support working with Microsoft.ML from F#:
 - Schema and column information utility functions
 - Operator to join transformations into a composite pipeline
 - Generate an F# record type from IDataView schema
-
+- Make F# CLIMutable records work with ML.Net API when loading/creating IDataView from enumberables. This deals with the fields with '@' in their names by creating a clean schema
